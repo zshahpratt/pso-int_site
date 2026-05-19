@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSO Admin Portal</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #4f46e5, #9333ea, #ec4899);
+      overflow: hidden;
+      color: white;
+    }
+
+    .background-blur {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: rgba(255, 255, 255, 0.15);
+      filter: blur(120px);
+      border-radius: 50%;
+      top: -100px;
+      left: -100px;
+    }
+
+    .background-blur2 {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: rgba(255, 255, 255, 0.1);
+      filter: blur(100px);
+      border-radius: 50%;
+      bottom: -100px;
+      right: -100px;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 50px 40px;
+      border-radius: 24px;
+      text-align: center;
+      width: 90%;
+      max-width: 420px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+      animation: fadeIn 0.8s ease;
+    }
+
+    .logo {
+      width: 140px;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 30px;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.95rem;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 16px 20px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #06b6d4, #3b82f6);
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .links a:nth-child(2) {
+      background: linear-gradient(135deg, #f97316, #ef4444);
+    }
+
+    .links a:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 40px 25px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .links a {
+        font-size: 1rem;
+        padding: 14px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="background-blur"></div>
+  <div class="background-blur2"></div>
+
+  <div class="container">
+    <img src="pso-logo.png" alt="PSO Logo" class="logo">
+
+    <h1>PSO Admin Portal</h1>
+    <p>Quick access to your administrative tools</p>
+
+    <div class="links">
+      <a href="https://pso-int.pratt.edu/myadmin/" target="_blank">
+        MySQL Admin
+      </a>
+
+      <a href="https://pso-int.pratt.edu/ldapadmin/" target="_blank">
+        LDAP Admin
+      </a>
+    </div>
+
+    <div class="footer">
+      © 2026 Pratt PSO
+    </div>
+  </div>
+
+</body>
+</html>
